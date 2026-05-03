@@ -1,0 +1,8 @@
+{
+  "rows": {
+    "dim_time": 31,
+    "dim_workout": 3864,
+    "dim_nutrition": 31,
+    "fact_daily_biometrics": 12625
+  }
+}

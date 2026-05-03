@@ -1,0 +1,32 @@
+nutrition_key,full_date,protein_g,carbs_g,fat_g,nutrition_calories,sample_foods,is_high_protein,is_poultry,is_vegetarian
+1,2016-04-12,44.44,84.06,14.010000000000002,640.09,"Pasta mixed dishes, excludes macaroni and cheese, Cheese, Liquor and cocktails",False,False,True
+2,2016-04-13,20.630000000000003,68.05000000000001,27.08,598.44,"French fries and other fried white potatoes, Meat mixed dishes, Mashed potatoes and white potato mixtures",False,False,True
+3,2016-04-14,24.2,49.17,56.96,806.12,"Sausages, Dips, gravies, other sauces, Cream cheese, sour cream, whipped cream",False,False,True
+4,2016-04-15,24.04,116.85,15.5,703.0600000000001,"Meat mixed dishes, Pasta, noodles, cooked grains, Formula, prepared from powder",False,False,True
+5,2016-04-16,15.309999999999999,92.26,20.75,617.03,"Saltine crackers, Coffee, Spinach",False,False,True
+6,2016-04-17,13.06,156.17000000000002,16.72,827.4000000000001,"Sugars and honey, Milk shakes and other dairy drinks, Pasta mixed dishes, excludes macaroni and cheese",False,False,True
+7,2016-04-18,44.93,57.540000000000006,45.300000000000004,817.5799999999999,"Meat mixed dishes, Chicken, whole pieces, Ice cream and frozen dairy desserts",False,True,False
+8,2016-04-19,35.480000000000004,36.15,144.06,1583.06,"Frankfurter sandwiches, String beans, Pizza",False,False,True
+9,2016-04-20,16.880000000000003,65.82,19.59,507.10999999999996,"Seafood sandwiches, Rice mixed dishes, Fruit drinks",False,False,True
+10,2016-04-21,20.83,104.44,17.349999999999998,657.23,"Pasta mixed dishes, excludes macaroni and cheese, Egg rolls, dumplings, sushi, Liquor and cocktails",False,False,True
+11,2016-04-22,16.619999999999997,110.2,11.27,608.71,"Deli and cured meat sandwiches, Liquor and cocktails, Grits and other cooked cereals",False,False,True
+12,2016-04-23,19.009999999999998,57.68,37.519999999999996,644.4399999999999,"Mashed potatoes and white potato mixtures, Coleslaw, non-lettuce salads, Egg/breakfast sandwiches",False,False,True
+13,2016-04-24,29.759999999999998,139.04,99.66,1572.14,"Mustard and other condiments, Pizza, Cookies and brownies",False,False,True
+14,2016-04-25,71.34,31.09,63.38000000000001,980.14,"Dips, gravies, other sauces, Cheese, Chicken, whole pieces",False,True,False
+15,2016-04-26,31.15,35.36,28.06,518.58,"Gelatins, ices, sorbets, Cheese, Vegetable juice",False,False,True
+16,2016-04-27,34.36,42.41,23.16,515.52,"Eggs and omelets, Nutritional beverages, Meat mixed dishes",False,False,True
+17,2016-04-28,54.34,21.96,30.18,576.8199999999999,"Other red and orange vegetables, Other vegetables and combinations, Chicken, whole pieces",False,True,False
+18,2016-04-29,18.2,125.12,11.450000000000001,676.33,"Corn, Coffee, Poultry mixed dishes",False,False,True
+19,2016-04-30,34.940000000000005,95.72,52.93,999.01,"Meat mixed dishes, Cream cheese, sour cream, whipped cream, Baby food: snacks and sweets",False,False,True
+20,2016-05-01,19.93,140.60999999999999,34.91,956.35,"Ready-to-eat cereal, higher sugar (>21.2g/100g), Turnovers and other grain-based items, Other vegetables and combinations",False,False,True
+21,2016-05-02,28.5,27.66,121.96000000000001,1322.28,"Fish, Salad dressings and vegetable oils, Formula, prepared from powder",False,False,False
+22,2016-05-03,32.62,61.86,24.869999999999997,601.75,"Liver and organ meats, Vegetable dishes, Pasta mixed dishes, excludes macaroni and cheese",False,False,True
+23,2016-05-04,47.96,60.94,46.489999999999995,854.01,"Yogurt, Greek, Grits and other cooked cereals, Pasta mixed dishes, excludes macaroni and cheese",False,False,True
+24,2016-05-05,43.59,93.62,33.96,854.48,"Formula, prepared from powder, Pizza, Cold cuts and cured meats",False,False,True
+25,2016-05-06,13.02,50.06999999999999,15.36,390.6,"Coffee, Apples, Tomato-based condiments",False,False,True
+26,2016-05-07,63.58,41.93,38.839999999999996,771.6,"Turkey, duck, other poultry, Spinach, Formula, prepared from powder",False,True,False
+27,2016-05-08,29.799999999999997,42.58,20.47,473.75,"Burritos and tacos, Soups, Not included in a food category",False,False,True
+28,2016-05-09,35.13,40.74,64.35,882.6300000000001,"Nuts and seeds, Eggs and omelets, Other dark green vegetables",False,False,True
+29,2016-05-10,18.5,31.099999999999998,24.98,423.22,"Formula, prepared from powder, Not included in a food category, Poultry mixed dishes",False,False,True
+30,2016-05-11,52.41,15.900000000000002,43.14,661.5,"Coffee, Pork, Eggs and omelets",False,False,False
+31,2016-05-12,19.47,69.02000000000001,14.309999999999999,482.75,"Fried rice and lo/chow mein, Pizza, Poultry mixed dishes",False,False,True

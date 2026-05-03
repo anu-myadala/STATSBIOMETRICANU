@@ -1,0 +1,18 @@
+paths:
+  fitbit_zip: "/Users/anumyad/Downloads/archive (1).zip"
+  fitbit_secondary_zip: "/Users/anumyad/Downloads/archive (2).zip"
+  fooddata_zip: "/Users/anumyad/Downloads/FoodData_Central_survey_food_csv_2022-10-28.zip"
+  sleep_zip: "/Users/anumyad/Downloads/archive (4).zip"
+  exercise_zip: "/Users/anumyad/Downloads/archive (5).zip"
+  output_dir: "data/processed"
+  raw_dir: "data/raw"
+  models_dir: "models"
+  reports_dir: "reports"
+settings:
+  sample_user_count: 10
+  max_days: 90
+  high_protein_threshold_g: 150
+  pca_components: 5
+  kmeans_clusters: 3
+  random_state: 42
+  nutrition_items_per_day: 4
