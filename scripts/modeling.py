@@ -11,10 +11,12 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import (
     confusion_matrix,
+    davies_bouldin_score,
     f1_score,
     mean_squared_error,
     r2_score,
     roc_auc_score,
+    silhouette_score,
 )
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -29,6 +31,7 @@ def load_config() -> dict:
 
 
 def build_recovery_label(df: pd.DataFrame) -> pd.Series:
+    """Build recovery label: high sleep + low resting HR."""
     sleep_threshold = df["sleep_duration_min"].quantile(0.6)
     hr_threshold = df["resting_heart_rate"].quantile(0.6)
     return (df["sleep_duration_min"] >= sleep_threshold) & (df["resting_heart_rate"] <= hr_threshold)
@@ -64,9 +67,14 @@ def main() -> None:
     pca_cols = [col for col in df.columns if col.startswith("pca_")]
     feature_cols = feature_cols + pca_cols
 
-    # Clustering
+    # Clustering with evaluation metrics
     kmeans = KMeans(n_clusters=config["settings"]["kmeans_clusters"], random_state=config["settings"]["random_state"])
     df["cluster"] = kmeans.fit_predict(df[feature_cols])
+
+    # Calculate clustering metrics
+    X_for_clustering = df[feature_cols].values
+    silhouette = silhouette_score(X_for_clustering, df["cluster"])
+    davies_bouldin = davies_bouldin_score(X_for_clustering, df["cluster"])
 
     # Regression: predict calories
     X = df[feature_cols]
@@ -103,8 +111,20 @@ def main() -> None:
     cm = confusion_matrix(y_test, cls_pred).tolist()
 
     metrics = {
-        "regression": {"rmse": rmse, "r2": r2},
-        "classification": {"f1": f1, "roc_auc": roc_auc, "confusion_matrix": cm},
+        "regression": {
+            "rmse": rmse,
+            "r2": r2,
+        },
+        "classification": {
+            "f1": f1,
+            "roc_auc": roc_auc,
+            "confusion_matrix": cm,
+        },
+        "clustering": {
+            "silhouette": silhouette,
+            "davies_bouldin": davies_bouldin,
+            "n_clusters": config["settings"]["kmeans_clusters"],
+        },
     }
 
     models_dir.mkdir(parents=True, exist_ok=True)
@@ -118,7 +138,10 @@ def main() -> None:
     df.to_csv(output_dir / "daily_with_clusters.csv", index=False)
     (reports_dir / "metrics.json").write_text(json.dumps(metrics, indent=2))
 
-    print("Modeling complete. Metrics saved to", reports_dir / "metrics.json")
+    print(f"Modeling complete.")
+    print(f"  Regression RMSE: {rmse:.2f}, R²: {r2:.3f}")
+    print(f"  Classification F1: {f1:.3f}, ROC-AUC: {roc_auc:.3f}")
+    print(f"  Clustering Silhouette: {silhouette:.3f}, Davies-Bouldin: {davies_bouldin:.3f}")
 
 
 if __name__ == "__main__":

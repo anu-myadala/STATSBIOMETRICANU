@@ -1,0 +1,16 @@
+[
+  "total_steps",
+  "very_active_minutes",
+  "resting_heart_rate",
+  "sleep_duration_min",
+  "protein_g",
+  "carbs_g",
+  "fat_g",
+  "nutrition_calories",
+  "sedentary_minutes",
+  "pca_1",
+  "pca_2",
+  "pca_3",
+  "pca_4",
+  "pca_5"
+]
